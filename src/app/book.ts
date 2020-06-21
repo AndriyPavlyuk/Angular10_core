@@ -1,13 +1,13 @@
-export class Book {
-  title: string | undefined;
+export interface Book {
+  title: string;
 
-  author: string | undefined;
+  author: string;
 
-  year: number | undefined;
+  year: number;
 
-  description: string | undefined;
+  description: string;
 
-  pages: number | undefined;
+  pages: number;
 }
 
 
