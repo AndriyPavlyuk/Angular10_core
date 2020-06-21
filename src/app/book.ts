@@ -8,6 +8,8 @@ export interface Book {
   description: string;
 
   pages: number;
+
+  price?: number;
 }
 
 

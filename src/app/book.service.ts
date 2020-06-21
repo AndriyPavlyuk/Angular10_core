@@ -14,6 +14,7 @@ export class BookService {
       author: 'Douglas Crockford',
       year: 2008,
       pages: 172,
+      price: 100,
       description: 'This authoritative books scrapes away these bad features to reveal a subset of JavaScript that\'s more reliable, readable, and maintainable'
     },
       {
