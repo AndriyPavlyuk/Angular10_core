@@ -23,6 +23,10 @@ export class BookRegistrationComponent implements OnInit {
     });
   }
 
+  isValid(controlName: string): boolean {
+    return this.bookForm.get(controlName)!.dirty && !this.bookForm.get(controlName)!.valid;
+  }
+
   ngOnInit(): void {
   }
 
