@@ -10,6 +10,8 @@ export class BookComponent implements OnInit {
 
   book: Book;
 
+  count: number | undefined;
+
   constructor() {
     this.book = {
       author: 'Misko Genchev',
@@ -21,6 +23,10 @@ export class BookComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  displayNumber(value: string | number | undefined): void {
+    this.count = String(value).length;
   }
 
 }

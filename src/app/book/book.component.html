@@ -1,7 +1,8 @@
 <div>Book details:
-  <div>Author: {{book.author}}</div>
-  <div>Title: {{book.title}}</div>
-  <div>Year: {{book.year}}</div>
-  <div>Pages: {{book.pages}}</div>
-  <div>Description: {{book.description}}</div>
+  <div (click)="displayNumber(book.author)">Author: {{book.author}}</div>
+  <div (click)="displayNumber(book.title)">Title: {{book.title}}</div>
+  <div (click)="displayNumber(book.year)">Year: {{book.year}}</div>
+  <div (click)="displayNumber(book.pages)">Pages: {{book.pages}}</div>
+  <div (click)="displayNumber(book.description)">Description: {{book.description}}</div>
 </div>
+<div>Total numbers: {{count}}</div>
