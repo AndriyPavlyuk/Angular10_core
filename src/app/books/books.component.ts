@@ -18,8 +18,4 @@ export class BooksComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  isJavascript(book: Book): boolean {
-    return book.title.toLowerCase().indexOf('javascript') >= 0;
-  }
-
 }

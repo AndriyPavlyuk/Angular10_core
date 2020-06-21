@@ -8,6 +8,7 @@ import {QuotePipe} from './quote.pipe';
 import {ReactiveFormsModule} from '@angular/forms';
 import {BookRegistrationComponent} from './book-registration-component/book-registration.component';
 import {JsonPipe} from '@angular/common';
+import {BookDetailComponent} from './book-detail/book-detail.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import {JsonPipe} from '@angular/common';
     BookComponent,
     BooksComponent,
     QuotePipe,
-    BookRegistrationComponent
+    BookRegistrationComponent,
+    BookDetailComponent
   ],
   imports: [
     BrowserModule,
