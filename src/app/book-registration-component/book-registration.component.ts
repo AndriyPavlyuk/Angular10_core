@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {Book} from '../book';
 import {BookService} from '../book.service';
 import {JsonPipe} from '@angular/common';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-book-registration',
@@ -10,14 +10,24 @@ import {JsonPipe} from '@angular/common';
 })
 export class BookRegistrationComponent implements OnInit {
 
-  constructor(private bookService: BookService, private jsonPipe: JsonPipe) {
+  private bookForm: FormGroup;
+
+  constructor(private bookService: BookService, private jsonPipe: JsonPipe,
+              formBuilder: FormBuilder) {
+    this.bookForm = formBuilder.group({
+      title: formBuilder.control('', [Validators.required]),
+      author: formBuilder.control('', [Validators.required]),
+      // pages: formBuilder.control('', [Validators.required]),
+      // description: formBuilder.control('', []),
+      // year: formBuilder.control('', [Validators.required])
+    });
   }
 
   ngOnInit(): void {
   }
 
-  register(book: Book): void {
-    console.log('Saved book: ' + this.jsonPipe.transform(book));
+  register(): void {
+    console.log('Saved book: ' + this.jsonPipe.transform(this.bookForm.value));
   }
 
 }
